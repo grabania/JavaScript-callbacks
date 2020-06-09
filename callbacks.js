@@ -56,3 +56,31 @@ console.log(arr);
 // or as an anonym function:
 // const arr = [ 1, 3, 5 ].map((elem) => elem * 2);
 // console.log(arr);
+
+//Transform this piece of code with using callback:
+// const arr1 = [ 4, 6, 10 ];
+
+// function transformArray() {
+// 	for (let i = 0; i < arr1.length; i++) {
+// 		arr1[i] = arr1[i] * 2;
+// 	}
+// }
+
+// transformArray(arr1);
+// console.log(arr1);
+
+const arr1 = [ 4, 6, 10 ];
+
+const odd = (elem) => elem - 1;
+const sum = (elem) => elem + 2;
+const multiply = (elem) => elem * 2;
+
+const transformArray = (arr, callback) => {
+	for (let i = 0; i < arr1.length; i++) {
+		arr[i] = callback(arr1[i]);
+	}
+};
+
+transformArray(arr, odd);
+
+console.log(arr);
