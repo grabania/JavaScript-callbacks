@@ -44,3 +44,15 @@ function logY(param) {
 }
 
 logZ(logY);
+
+//Another using of callback
+
+const multiplay = (elem) => elem * 2;
+
+const arr = [ 1, 3, 5 ].map(multiplay); //muliply : it is callback
+
+console.log(arr);
+
+// or as an anonym function:
+// const arr = [ 1, 3, 5 ].map((elem) => elem * 2);
+// console.log(arr);
